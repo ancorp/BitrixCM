@@ -37,8 +37,9 @@
     <?php
     $comments = CIBlockElement::GetList(Array(), Array("IBLOCK_ID" => COMMENTS_IBLOCK_ID));
     ```
-- при выборках данных (например, [GetList](http://dev.1c-bitrix.ru/api_help/iblock/classes/ciblockelement/getlist.php)) ОБЯЗАТЕЛЬНО указывать поля, которые нужны дальнейших манипуляций, кроме случаев, когда нужны все поля
+- при выборках данных (например, [GetList](http://dev.1c-bitrix.ru/api_help/iblock/classes/ciblockelement/getlist.php)) ОБЯЗАТЕЛЬНО указывать поля, которые нужны для дальнейших манипуляций, кроме случаев, когда нужны все поля
 - при необходмости выбрать несколько элементов по ID, ОБЯЗАТЕЛЬНО использовать GetList вместо GetByID
+  
     **Не правильно**:
     ```php
     <?php

@@ -1,8 +1,8 @@
 Стандарты программирования для платформы 1С-Битрикс
 =====================
 В этом руководстве описаны рекомендуемые техники при разработке под платформу 1С-Битрикс (далее просто Битрикс).
-Весь PHP код должен написан в соответствии со стандартом [PSR-1][]
-Стиль написания кода должен соответствовать стандарту [PSR-2][]
+Весь PHP код должен написан в соответствии со стандартом [PSR-1][].
+Стиль написания кода должен соответствовать стандарту [PSR-2][].
 
 [PSR-1]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md
 [PSR-2]: https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
@@ -23,19 +23,19 @@
     $comments = CIBlockElement::GetList(Array(), Array("IBLOCK_ID" => 12));
 ```
 Правильно:
-* Создаем файл constants.php и указываем в нем:
+ 1. Создаем файл constants.php и указываем в нем:
 ```php
     <?php
     //ИБ с комментариями пользователей
     const COMMENTS_IBLOCK_ID = 12;
 ```
-* Подключаем этот файл в ini.php
+ 2. Подключаем этот файл в init.php
 ```php
     <?php
     //Константы проекта
     include_once($_SERVER["DOCUMENT_ROOT"] . '/bitrix/php_interface/includes/constants.php');
 ```
-* Используем константу
+ 3. Используем константу
 ```php
     <?php
     $comments = CIBlockElement::GetList(Array(), Array("IBLOCK_ID" => COMMENTS_IBLOCK_ID));

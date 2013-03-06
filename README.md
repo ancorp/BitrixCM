@@ -35,7 +35,7 @@ const COMMENTS_IBLOCK_ID = 12;
 include_once($_SERVER["DOCUMENT_ROOT"] . '/bitrix/php_interface/includes/constants.php');
 ```
  3. Используем константу
-```php
+```php   
 <?php
 $comments = CIBlockElement::GetList(Array(), Array("IBLOCK_ID" => COMMENTS_IBLOCK_ID));
 ```

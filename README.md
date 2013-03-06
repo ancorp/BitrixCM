@@ -24,11 +24,11 @@
     ```
     Правильно:
      1. Создаем файл constants.php и указываем в нем:
-    ```php
-        <?php
-        //ИБ с комментариями пользователей
-        const COMMENTS_IBLOCK_ID = 12;
-    ```
+```php
+    <?php
+    //ИБ с комментариями пользователей
+    const COMMENTS_IBLOCK_ID = 12;
+```
      2. Подключаем этот файл в ini.php
     ```php
         <?php
@@ -37,7 +37,7 @@
     ```
      3. Используем константу
     ```php
-        <?php  
+        <?php
         $comments = CIBlockElement::GetList(Array(), Array("IBLOCK_ID" => COMMENTS_IBLOCK_ID));
     ```
 3. Работа с компонентами
